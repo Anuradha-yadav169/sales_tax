@@ -12,11 +12,9 @@ file_name = ARGV[0]
 total_price = 0
 total_tax = 0
 cart = ShoppingCart.new()
-#Add the StateTax and SalesTax Class to TaxRules 
 TaxRule.add_rule(Object.const_get("ImportTaxRule"))
 TaxRule.add_rule(Object.const_get("SalesTaxRule"))
 
-#create the item objects and add them to cart
   File.open(file_name, "r") do |infile|
       while (line = infile.gets)
            element = Input.parse(line)
