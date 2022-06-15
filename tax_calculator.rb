@@ -2,9 +2,9 @@ require './constants'
 class TaxCalculator
   class << self
       def applicable_taxes_for(product)
-         applicable_rules ||= []
-          TaxRule.rules.each do |r|
-            applicable_rules << r if r.applies_to? product
+        applicable_rules ||= []
+        TaxRule.rules.each do |r|
+          applicable_rules << r if r.applies_to? product
         end
          applicable_rules
       end

@@ -7,7 +7,6 @@ require './import_tax_rule.rb'
 require './tax_calculator.rb'
 require './recipt.rb'
 
-
 file_name = ARGV[0]
 total_price = 0
 total_tax = 0
@@ -29,8 +28,8 @@ TaxRule.add_rule(Object.const_get("SalesTaxRule"))
        total_tax += item.tax()
      end
 #calculate the total price & total tax for the cart and print the recipt     
-     cart.total_price=(total_price)
-     cart.total_tax=(total_tax)
+     cart.total_price = (total_price)
+     cart.total_tax = (total_tax)
      recipt = Recipt.new(cart.clone)
      recipt.print()
  end

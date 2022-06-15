@@ -13,4 +13,4 @@ module ImportTaxRule
         Constants::IMPORT_TAX_RATE
       end
     end
-  end
+end
