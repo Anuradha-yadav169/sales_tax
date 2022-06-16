@@ -11,7 +11,7 @@ class Item
    end
   
   def imported?
-     !!(@name =~ /imported/)
+    !!(@name =~ /imported/)
   end
   
   def tax_exempt?
@@ -19,6 +19,6 @@ class Item
   end
   
   def exemptions
-      @exemptions ||= YAML.load File.open(Constants::EXAMPTION_ITEMS)
+    @exemptions ||= YAML.load File.open(Constants::EXAMPTION_ITEMS)
   end
 end

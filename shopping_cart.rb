@@ -6,6 +6,5 @@ class ShoppingCart
   
   def add(item)
     @items.push(item)
-  self
   end
 end
